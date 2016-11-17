@@ -1,0 +1,17 @@
+{
+  "name": "dowhile",
+  "homepage": "https://github.com/Lauritha/dowhile",
+  "authors": [
+    "Luis Vilches <lvilches21@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
