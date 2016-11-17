@@ -3,7 +3,7 @@ $(document).ready(function(){
 		if(validacion()){
 			$.ajax({
 			type: 'post',
-			url: 'contacto.php',
+			url: '/contacto.php',
 			data: $(this).serialize(),
 			success: function(response){
 				if (response == 'success') {
