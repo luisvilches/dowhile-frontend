@@ -143,10 +143,10 @@
 
     <section class="no-padding" id="portfolio" ng-controller="portafolio">
         <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
+            <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6" ng-repeat="sitio in websites">
-                    <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
-                        <img ng-src="http://localhost:4000/{{sitio.urlImage}}"" class="img-responsive" alt="">
+		    <a class="portfolio-box">
+                        <img ng-src="http://dowhile.cl:4000/{{sitio.urlImage}}"" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -157,7 +157,7 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
+                     </a>
                 </div>
                 
         </div>

@@ -3,7 +3,7 @@ $(document).ready(function(){
 		if(validacion()){
 			$.ajax({
 			type: 'post',
-			url: 'http:localhost:4000/mail',
+			url: 'http://dowhile.cl:4000/mail',
 			data: $(this).serialize(),
 			success: function(response){
 				if (response == 'success') {
