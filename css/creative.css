@@ -185,7 +185,7 @@ header {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(20,20,20,.6);
+  background: rgba(20,20,20,.3);
 }
 header .header-content {
   position: relative;
@@ -497,4 +497,10 @@ footer p{
 .posBtn{
   position: absolute;
   right: 40px;
+}
+.mr-top{
+  margin-top: 3em;
+}
+.mr-bottom{
+  margin-bottom: 2em;
 }
