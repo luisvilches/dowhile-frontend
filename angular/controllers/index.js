@@ -19,7 +19,7 @@ angular.module("dowhile",[])
 .controller('about', function($scope, $http){
 	$http({
 		method: "GET",
-		url: "http://localhost:4000/api/about"
+		url: "http://dowhile.cl:4000/api/about"
 	}).then(function(response){
 		console.log(response.data.about);
 		$scope.about = response.data.about;
@@ -35,7 +35,7 @@ angular.module("dowhile",[])
 .controller('header', function($scope, $http){
 	$http({
 		method: "GET",
-		url: "http://localhost:4000/api/header"
+		url: "http://dowhile.cl:4000/api/header"
 	}).then(function(response){
 		console.log(response.data.header);
 		$scope.header = response.data.header;
