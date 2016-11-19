@@ -72,27 +72,29 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <header class="visible-lg visible-md">
+    <header class="visible-lg visible-md" ng-controller="header">
         <div class="fondo">
         	<div class="header-content">
 	            <div class="header-content-inner">
-	                <h1 id="homeHeading">Desarrollo web & móvil</h1>
+	                <h1 id="homeHeading">{{header.titulo}}</h1>
 	                <hr>
-	                <p>¿Quiéres destacar de la competencia?</p>
+	                <p>{{header.texto}}</p>
+                    <p>{{header.parrafo}}</p>
 	                <a href="#about" class="btn btn-primary btn-xl page-scroll">Conócenos</a>
 	            </div>
 	        </div>
         </div>
     </header>
 
-    <section class="bg-primary" id="about">
+    <section class="bg-primary" id="about" ng-controller="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">¿Quiénes somos?</h2>
+                    <h2 class="section-heading">{{about.titulo}}</h2>
                     <hr class="light"> 
-                    <p class="text-faded">Somos un equipo de jóvenes profesionales, con amplios conocimientos en Diseño Web, Programación, Base de Datos, Marketing y Redes Sociales. Nuestro fin es poder ayudar a impulsar el sitio web de tu empresa, que sin duda es la vitrina para tus clientes.</p>
-                    <p class="text-faded">Nuestro trabajo es personalizado, cuenta con respaldo, trabajo directo, eficaz y que marca tendencias en desarrollo.</p>
+                    <p class="text-faded"><br>
+                    <p>{{about.texto}}</p></p>
+                    <p class="text-faded">{{about.parrafo}}</p>
                     <p class="text-faded">¿Tienes una idea en mente?</p>
                     <a href="#services" class="page-scroll btn btn-default btn-xl sr-button mr-top">Conoce nuestros servicios</a>
                 </div>
