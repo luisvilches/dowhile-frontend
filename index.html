@@ -100,10 +100,10 @@
         <div class="fondo">
         	<div class="header-content">
 	            <div class="header-content-inner">
-	                <h1 id="homeHeading">{{header.titulo}}</h1>
+	                <h1 id="homeHeading" ng-bind="header.titulo"></h1>
 	                <hr>
-	                <p>{{header.texto}}</p>
-                    <p>{{header.parrafo}}</p>
+	                <p ng-bind="header.texto"></p>
+                    <p ng-bind="header.parrafo"></p>
 	                <a href="#about" class="btn btn-primary btn-xl page-scroll">Conócenos</a>
 	            </div>
 	        </div>
@@ -114,11 +114,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">{{about.titulo}}</h2>
+                    <h2 class="section-heading" ng-bind="about.titulo"></h2>
                     <hr class="light"> 
                     <p class="text-faded"><br>
-                    <p>{{about.texto}}</p></p>
-                    <p class="text-faded">{{about.parrafo}}</p>
+                    <p ng-bind="about.texto"></p>
+                    <p class="text-faded" ng-bind="about.parrafo"></p>
                     <p class="text-faded">¿Tienes una idea en mente?</p>
                     <a href="#services" class="page-scroll btn btn-default btn-xl sr-button mr-top">Conoce nuestros servicios</a>
                 </div>
@@ -170,12 +170,12 @@
 	<div id="portfolio"></div>
     </section>
 
-    <section class="no-padding" id="pportfolio" ng-controller="portafolio">
+    <section class="no-padding" ng-controller="portafolio">
         <div class="container-fluid">
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6" ng-repeat="sitio in websites">
 		            <a class="portfolio-box">
-                        <img ng-src="http://dowhile.cl:4000/{{sitio.urlImage}}"" class="img-responsive" alt="">
+                        <img ng-src="http://dowhile.cl:4000/{{sitio.urlImage}}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -183,8 +183,8 @@
                                 </div>
                                 <div class="project-name">
                                     {{sitio.nombre}}
-                                </div>
-				                {{sitio.url}}
+                                </div> 
+                                {{sitio.url}}
                             </div>
                         </div>
                      </a>
