@@ -62,7 +62,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="openDialog();">
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -227,6 +227,12 @@
             </div>
         </div>
     </section>
+    <div id="popup" class="popup">
+        <a onclick="closeDialog('popup');" class="close fa fa-times-circle"></a>
+        <div>
+            <img src="img/campana.jpg" alt="" class="img-responsive">
+        </div>
+    </div>
     <footer>
     	<p><span class="logo-footer">dowhile</span> © 2016. Copyright Todos los derechos reservados</p>
     </footer>
@@ -249,6 +255,25 @@
     <script type="text/javascript" src="js/alertify.js"></script>
     <script type="text/javascript" src="js/validacion.js"></script>
     <script type="text/javascript" src="js/enviar.js"></script>
+
+
+    <script type="text/javascript">
+        function openDialog() {
+            $('#overlay').fadeIn('fast', function() {
+                $('#popup').css('display','block');
+                $('#popup').animate({'left':'30%'},500);
+            });
+        }
+
+        function closeDialog(id) {
+            $('#'+id).css('position','absolute');
+            $('#'+id).animate({'left':'-100%'}, 500, function() {
+                $('#'+id).css('position','fixed');
+                $('#'+id).css('left','100%');
+                $('#overlay').fadeOut('fast');
+            });
+        }
+    </script>
 
 </body>
 
